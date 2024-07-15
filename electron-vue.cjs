@@ -41,9 +41,9 @@ fs.writeFileSync(
 `
 );
 const pkgFile = JSON.parse(fs.readFileSync("package.json"));
-pkg.name = pkgFile.name;
-pkg.version = pkgFile.version;
 const pkg = {
+	name: pkgFile.name,
+	version: pkgFile.version,
 	type: "module",
 	main: "dist/electron/main.js",
 	scripts: {
