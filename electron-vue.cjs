@@ -58,6 +58,9 @@ const pkg = {
 		"app:preview": "npm run vite:build && tsc && electron .",
 	},
 	build: {
+		directories: {
+			output: "release/${version}",
+		},
 		files: ["dist"],
 		win: {
 			artifactName: "${productName}_${version}.${ext}",
